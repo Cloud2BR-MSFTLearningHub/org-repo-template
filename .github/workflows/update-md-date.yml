@@ -20,13 +20,13 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+      - name: Fetch PR base branch
+        run: git fetch --no-tags origin ${{ github.event.pull_request.base.ref }}
 
-      - name: Install dependencies
-        run: pip install python-dateutil
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
       - name: Configure Git 
         run: |
@@ -34,7 +34,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
 
       - name: Update last modified date in Markdown files
-        run: python .github/workflows/update_date.py
+        env:
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: python .github/scripts/update_markdown_dates.py
 
       - name: Pull (merge) remote changes, commit, and push if needed
         env:
