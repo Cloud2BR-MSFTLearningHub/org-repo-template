@@ -3,9 +3,9 @@
 Atlanta, USA
 
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
-Last updated: 2026-04-01
+Last updated: 2026-04-07
 
 ----------
 
@@ -22,7 +22,7 @@ Last updated: 2026-04-01
 
 ## Required Markdown Header
 
-> Within this org, every tracked Markdown file must include the following block immediately below the main `# Title` line. The location line can vary, but it must exist. The GitHub badge line, the `brown9804` profile line, the date format, and the separator are org-wide standard and must match this structure exactly. The `Validate and Fix Markdown` workflow checks every tracked `.md` file against this header pattern on pull requests.
+> Within this org, every tracked Markdown file must include the following block immediately below the main `# Title` line. The location line can vary, but it must exist. The GitHub badge line, the `Cloud2BR OSS - Learning Hub` org link line, the date format, and the separator are org-wide standard and must match this structure exactly. The `Validate and Fix Markdown` workflow checks every tracked `.md` file against this header pattern on pull requests.
 
 ```md
 # Document Title
@@ -30,7 +30,7 @@ Last updated: 2026-04-01
 City, Country
 
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: YYYY-MM-DD
 
@@ -39,7 +39,7 @@ Last updated: YYYY-MM-DD
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1580-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-04-01</p>
+  <img src="https://img.shields.io/badge/Total%20views-40-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->
