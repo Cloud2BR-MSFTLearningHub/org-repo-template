@@ -19,6 +19,23 @@ Last updated: 2026-04-07
 | `.github/workflows/update-md-date.yml` | Pull requests to `main` | Looks at the full PR diff, updates the `Last updated:` line inside the standard Markdown header block for changed Markdown files, and pushes the result back to the PR branch. |
 | `.github/workflows/validate_and_fix_notebook.yml` | Pull requests to `main` | Validates Jupyter notebooks, normalizes widget metadata when needed, and commits notebook-format fixes back to the PR branch. |
 | `.github/workflows/use-visitor-counter.yml` | Pull requests to `main` and manual runs | Runs the vendored visitor-counter script stored in this repo to refresh Markdown counter badges and `metrics.json`, then commits the updated repository traffic data. |
+| `.github/workflows/deploy-github-pages.yml` | Push and pull requests to `main`, and manual runs | Builds the MkDocs Material documentation site with `mkdocs build --strict` and, on `main`, deploys it to GitHub Pages. |
+
+## Documentation site (GitHub Pages)
+
+> This template ships a ready-to-use MkDocs Material documentation site that inherits the organization's layout, colors, and last-updated date. The site is published to GitHub Pages by the `deploy-github-pages.yml` workflow.
+
+| File or folder | Purpose |
+| --- | --- |
+| `mkdocs.yml` | Site configuration: name, navigation, theme palette, and Markdown extensions. Update `site_name`, `site_url`, `repo_url`, and `repo_name` per repository. |
+| `requirements.txt` | Python dependencies (MkDocs Material and Pymdown extensions) used by the build. |
+| `docs/` | Markdown pages served on the site. Each page keeps the standard header block. |
+| `docs/assets/css/custom.css` | Organization theme: navy and blue palette, wide layout, greyed navigation section titles, and the last-updated caption. |
+| `docs/assets/js/logo-link.js` | Points the header logo to the organization and opens it in a new tab. |
+| `docs/assets/js/external-links.js` | Opens external links in a new tab with `noopener noreferrer`. |
+
+To publish a new repository from this template, update `mkdocs.yml`, add pages under
+`docs/` and to the `nav`, then set the repository **Pages** source to **GitHub Actions**.
 
 ## Required Markdown Header
 
